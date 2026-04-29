@@ -1,100 +1,92 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yousra Portfolio</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial;
+      background:#0b0f1a;
+      color:white;
+    }
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-50 p-6 md:p-12">
+    .section{
+      padding:60px 20px;
+      max-width:900px;
+      margin:auto;
+    }
 
-      {/* Header */}
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }} 
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-10"
-      >
-        <h1 className="text-4xl font-bold">Yousra Elmasry</h1>
-        <p className="text-gray-600 mt-2">
-          HR Performance | Data Analyst | Python & Excel Specialist
-        </p>
-      </motion.div>
+    h1,h2{color:#d4a373}
 
-      {/* About */}
-      <Card className="mb-6">
-        <CardContent className="p-6">
-          <h2 className="text-xl font-bold mb-2">About Me</h2>
-          <p className="text-gray-700">
-            I combine programming and data analysis skills with HR performance management
-            to build KPI dashboards, automate reporting systems, and support data-driven
-            decision-making at management level.
-          </p>
-        </CardContent>
-      </Card>
+    .card{
+      background:rgba(255,255,255,0.05);
+      padding:20px;
+      border-radius:15px;
+      margin:10px 0;
+    }
 
-      {/* Skills */}
-      <Card className="mb-6">
-        <CardContent className="p-6">
-          <h2 className="text-xl font-bold mb-2">Skills</h2>
-          <ul className="grid grid-cols-2 gap-2 text-gray-700">
-            <li>Excel (Advanced)</li>
-            <li>KPIs Development</li>
-            <li>Data Analysis</li>
-            <li>Dashboard Design</li>
-            <li>Python Basics</li>
-            <li>SQL Fundamentals</li>
-            <li>HR Performance Systems</li>
-            <li>Reporting & Insights</li>
-          </ul>
-        </CardContent>
-      </Card>
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#d4a373;
+      color:#000;
+      border-radius:30px;
+      text-decoration:none;
+      margin-top:10px;
+    }
+  </style>
+</head>
 
-      {/* Projects */}
-      <Card className="mb-6">
-        <CardContent className="p-6">
-          <h2 className="text-xl font-bold mb-2">Projects</h2>
+<body>
 
-          <div className="space-y-4">
+<!-- HEADER -->
+<div class="section" style="text-align:center;">
+  <h1>Yousra Elmasry</h1>
+  <p>HR Performance | Data Analyst | Python & Excel Specialist</p>
+</div>
 
-            <div className="border p-4 rounded-lg">
-              <h3 className="font-semibold">KPI Performance Dashboard</h3>
-              <p className="text-gray-600 text-sm">
-                Built an Excel dashboard tracking employee performance, target vs actual analysis,
-                and automated insights for HR decision-making.
-              </p>
-            </div>
+<!-- ABOUT -->
+<div class="section">
+  <h2>About Me</h2>
+  <div class="card">
+    I combine programming and data analysis skills with HR performance management to build KPI dashboards, automate reporting systems, and support data-driven decision-making.
+  </div>
+</div>
 
-            <div className="border p-4 rounded-lg">
-              <h3 className="font-semibold">HR Data Analysis Report</h3>
-              <p className="text-gray-600 text-sm">
-                Analyzed sales and HR performance data to identify gaps, conversion rates,
-                and improvement recommendations.
-              </p>
-            </div>
+<!-- SKILLS -->
+<div class="section">
+  <h2>Skills</h2>
+  <div class="card">Excel (Advanced)</div>
+  <div class="card">KPI Development</div>
+  <div class="card">Data Analysis</div>
+  <div class="card">Dashboard Design</div>
+  <div class="card">Python Basics</div>
+  <div class="card">SQL Fundamentals</div>
+</div>
 
-            <div className="border p-4 rounded-lg">
-              <h3 className="font-semibold">Automation & Programming Projects</h3>
-              <p className="text-gray-600 text-sm">
-                Developed scripts for data processing and structured reporting workflows.
-              </p>
-            </div>
+<!-- PROJECTS -->
+<div class="section">
+  <h2>Projects</h2>
 
-          </div>
-        </CardContent>
-      </Card>
+  <div class="card">
+    <b>KPI Performance Dashboard</b>
+    <p>Excel dashboard tracking employee performance and KPIs.</p>
+  </div>
 
-      {/* Contact */}
-      <Card>
-        <CardContent className="p-6 text-center">
-          <h2 className="text-xl font-bold mb-2">Contact</h2>
-          <p className="text-gray-700 mb-4">
-            Available for HR Performance / Data Analyst opportunities
-          </p>
+  <div class="card">
+    <b>HR Data Analysis Report</b>
+    <p>Analyzed HR data to improve decision making.</p>
+  </div>
 
-          <Button className="bg-black text-white">
-            Download CV
-          </Button>
-        </CardContent>
-      </Card>
+</div>
 
-    </div>
-  );
-}
+<!-- CONTACT -->
+<div class="section" style="text-align:center;">
+  <h2>Contact</h2>
+  <p>Available for HR / Data Analyst opportunities</p>
+
+  <a class="btn" href="#">Download CV</a>
+</div>
+
+</body>
+</html>
