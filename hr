@@ -1,0 +1,100 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-50 p-6 md:p-12">
+
+      {/* Header */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }} 
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-10"
+      >
+        <h1 className="text-4xl font-bold">Yousra Elmasry</h1>
+        <p className="text-gray-600 mt-2">
+          HR Performance | Data Analyst | Python & Excel Specialist
+        </p>
+      </motion.div>
+
+      {/* About */}
+      <Card className="mb-6">
+        <CardContent className="p-6">
+          <h2 className="text-xl font-bold mb-2">About Me</h2>
+          <p className="text-gray-700">
+            I combine programming and data analysis skills with HR performance management
+            to build KPI dashboards, automate reporting systems, and support data-driven
+            decision-making at management level.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* Skills */}
+      <Card className="mb-6">
+        <CardContent className="p-6">
+          <h2 className="text-xl font-bold mb-2">Skills</h2>
+          <ul className="grid grid-cols-2 gap-2 text-gray-700">
+            <li>Excel (Advanced)</li>
+            <li>KPIs Development</li>
+            <li>Data Analysis</li>
+            <li>Dashboard Design</li>
+            <li>Python Basics</li>
+            <li>SQL Fundamentals</li>
+            <li>HR Performance Systems</li>
+            <li>Reporting & Insights</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      {/* Projects */}
+      <Card className="mb-6">
+        <CardContent className="p-6">
+          <h2 className="text-xl font-bold mb-2">Projects</h2>
+
+          <div className="space-y-4">
+
+            <div className="border p-4 rounded-lg">
+              <h3 className="font-semibold">KPI Performance Dashboard</h3>
+              <p className="text-gray-600 text-sm">
+                Built an Excel dashboard tracking employee performance, target vs actual analysis,
+                and automated insights for HR decision-making.
+              </p>
+            </div>
+
+            <div className="border p-4 rounded-lg">
+              <h3 className="font-semibold">HR Data Analysis Report</h3>
+              <p className="text-gray-600 text-sm">
+                Analyzed sales and HR performance data to identify gaps, conversion rates,
+                and improvement recommendations.
+              </p>
+            </div>
+
+            <div className="border p-4 rounded-lg">
+              <h3 className="font-semibold">Automation & Programming Projects</h3>
+              <p className="text-gray-600 text-sm">
+                Developed scripts for data processing and structured reporting workflows.
+              </p>
+            </div>
+
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Contact */}
+      <Card>
+        <CardContent className="p-6 text-center">
+          <h2 className="text-xl font-bold mb-2">Contact</h2>
+          <p className="text-gray-700 mb-4">
+            Available for HR Performance / Data Analyst opportunities
+          </p>
+
+          <Button className="bg-black text-white">
+            Download CV
+          </Button>
+        </CardContent>
+      </Card>
+
+    </div>
+  );
+}
